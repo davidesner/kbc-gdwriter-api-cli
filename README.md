@@ -2,6 +2,8 @@
 # kbc-gdwriter-api-cli
 Simple client Keboola GoodData writer API https://keboolagooddatawriterv2.docs.apiary.io/
 
+*NOTE: The base and design structure stolen from [keboola python sapi client](https://github.com/keboola/sapi-python-client)* 
+
 ## Usage:
 ```
 usage: duplicateConfig.py [-h]
@@ -15,7 +17,9 @@ positional arguments:
   to_token
   syrup_url_from  [https://syrup.keboola.com]
   syrup_url_to    [https://syrup.keboola.com]
+
 ```
+
 **Migrate one GD Writer config (tables, dimensions) to another:** 
 
 	- using default syrup URL (US Region https://syrup.keboola.com)
