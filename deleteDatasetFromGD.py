@@ -19,6 +19,7 @@ def main(config, token, table_id, project_id, syrup_url = 'https://syrup.keboola
     except Exception as err:
         print("Failed to delete dataset: {0}".format(err))
         exit()
+    print("Table " + table_id + "deleted sucessfully")
 
 
 

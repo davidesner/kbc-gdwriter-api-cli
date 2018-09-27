@@ -22,3 +22,23 @@ positional arguments:
 ```python
 python duplicateConfig.py source_config_id source_token dest_config_id dest_token
 ```
+
+**Delete dataset from GD**
+
+```
+usage: deleteDatasetFromGD.py [-h]
+                              config token table_id project_id [syrup_url]
+
+    Simple CMD to delete dataset from GD. Keeps the KBC table config. Useful to prevent fullload when deleting one object.
+
+
+
+positional arguments:
+  config
+  token
+  table_id
+  project_id
+  syrup_url   [https://syrup.keboola.com]
+  ```
+  
+  **NOTE:** Use with caution!
