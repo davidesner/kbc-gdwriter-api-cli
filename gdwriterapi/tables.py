@@ -40,7 +40,7 @@ class Tables(Endpoint):
         params = {'include': ','.join(include)} if include else {}
         return self._get(self.base_url, params=params)
 
-    def detail(self, table_id):
+    def detail(self, table_id, include=None):
         """
         Retrieves information about a given table.
 
@@ -50,10 +50,11 @@ class Tables(Endpoint):
         Raises:
             requests.HTTPError: If the API request fails.
         """
+        params = {'include': ','.join(include)} if include else {}
         if not isinstance(table_id, str) or table_id == '':
             raise ValueError("Invalid table_id '{}'.".format(table_id))
         url = '{}/{}'.format(self.base_url, table_id)
-        return self._get(url)
+        return self._get(url, params=params)
 
     def delete(self, table_id):
         """
